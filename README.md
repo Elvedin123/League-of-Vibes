@@ -28,3 +28,5 @@
 [Boiler plate webpage wireframe](https://www.figma.com/proto/sQKhfeXwNYJ7ZseYMKZf5d/Untitled?node-id=2%3A2&scaling=min-zoom&page-id=0%3A1)
 
 ### Component Heirarchy
+
+[Component Hierarchy](https://www.figma.com/file/1iXAfTaREXWhvH0gp8c86H/Untitled?node-id=0%3A1)
