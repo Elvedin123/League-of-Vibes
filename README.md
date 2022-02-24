@@ -76,3 +76,11 @@ client
 
 ## Post-MVP
 -Allowing users to view user profiles
+
+## Code Showcase
+
+> Use this section to include a brief code snippet of functionality that you are proud of and a brief description.
+
+## Code Issues & Resolutions
+
+> Use this section to list of all major issues encountered and their resolution.
