@@ -32,3 +32,20 @@
 [Component Hierarchy](https://www.figma.com/file/1iXAfTaREXWhvH0gp8c86H/Untitled?node-id=0%3A1)
 
 ### Code Snippet
+
+`
+
+rails app
+|__routes/tables/models
+|
+client
+|__src
+|__ assets/
+      |__ fonts
+      |__ graphics
+      |__ images
+      |__ mockups
+|__ components/
+      |__ Header.jsx
+|__ services/
+`
