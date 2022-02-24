@@ -13,3 +13,12 @@
  - Ability to select a post and route to the posts page
  - A page that consists all champions/ and a champ details page
  - Profile page that contains your team build
+
+ ### Libraries and Dependencies
+
+ |     Library      | Description                                |
+| :--------------: | :----------------------------------------- |
+|      React       |  Front end design|
+|   React Router Dom   |  Routing to various pages|
+| Ruby onRails |  Back end data|
+|     Postgres      | Database|
