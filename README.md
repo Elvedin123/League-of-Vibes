@@ -33,7 +33,7 @@
 
 ### Code Snippet
 
-`
+```
 
 rails app
 |__routes/tables/models
@@ -48,4 +48,4 @@ client
 |__ components/
       |__ Header.jsx
 |__ services/
-`
+```
