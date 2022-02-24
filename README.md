@@ -30,3 +30,5 @@
 ### Component Heirarchy
 
 [Component Hierarchy](https://www.figma.com/file/1iXAfTaREXWhvH0gp8c86H/Untitled?node-id=0%3A1)
+
+### Code Snippet
