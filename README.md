@@ -69,3 +69,5 @@ client
 | Create profile and Team Posts       |    H     |     5 hrs      |     1 hrs     |     TBD     |
 | Deploy and style                 |    H     |     8 hrs      |     1 hrs     |     TBD     |
 | TOTAL                            |          |     40 hrs     |     3 hrs     |     TBD     |
+
+### ERD
