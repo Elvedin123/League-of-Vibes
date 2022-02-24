@@ -71,3 +71,5 @@ client
 | TOTAL                            |          |     40 hrs     |     3 hrs     |     TBD     |
 
 ### ERD
+
+[ERD](https://lucid.app/lucidchart/9233882a-6fd6-434a-92e8-f82f15cc4dcd/edit?invitationId=inv_8d481cea-ee34-4e58-9074-ca71d0cad453)
