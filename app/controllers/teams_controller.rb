@@ -13,6 +13,7 @@ def get_user_teams
   @user = User.find(params[:user_id])
   render json: @user.teams
 end
+
   def create
     @team = Team.new(team_params)
     @team.user = @current_user

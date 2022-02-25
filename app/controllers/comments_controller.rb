@@ -13,6 +13,10 @@ class CommentsController < ApplicationController
     
     render json: @comments
   end
+
+  def show
+    render json: @comment
+  end
   def create 
     @comment = Comment.new(comment_params)
     @comment.user = @current_user
@@ -24,6 +28,16 @@ class CommentsController < ApplicationController
       render json: @comment.errors, status: :unprocessable_entity
     end
   end
+def update
+@comment.update(comment_params)
+
+render json: @comment
+end
+def destroy
+  @comment.destroy
+
+  render json: @comment
+end
 
   private
   def set_comment
