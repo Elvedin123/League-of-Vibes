@@ -13,5 +13,6 @@ Rails.application.routes.draw do
   post '/auth/login', to: 'authentications#login'
   get '/auth/verify', to: 'authentications#verify'
   get '/users/:user_id/teams', to: 'teams#get_user_teams'
+get'/comments', to: 'comments#get_all_comments'
   
 end

@@ -6,7 +6,7 @@ def index
   render json: @teams
 end
 def show
-render json: @team
+render json: @team, include: :comments
 end
 
 def get_user_teams
