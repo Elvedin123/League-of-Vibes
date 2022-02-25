@@ -3,7 +3,15 @@ Rails.application.routes.draw do
 
   # Defines the root path route ("/")
   # root "articles#index"
+ 
+  resources :users 
+
+  resources :teams do
+    resources :comments
+  end
+
   post '/auth/login', to: 'authentications#login'
   get '/auth/verify', to: 'authentications#verify'
-  resources :users
+  get '/users/:user_id/teams', to: 'teams#get_user_teams'
+  
 end
