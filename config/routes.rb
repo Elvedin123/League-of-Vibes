@@ -5,7 +5,9 @@ Rails.application.routes.draw do
   # root "articles#index"
  
   resources :users do 
-    resources :teams
+    resources :teams do 
+      resources :comments 
+    end
   end
 
   resources :teams do
