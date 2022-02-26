@@ -10,6 +10,11 @@ export const getOneTeam = async (team_id) => {
   return res.data
 }
 
+export const createTeam = async (teamData) => {
+  const res = await backendUrl.post(`/teams/${team_id}`, { team: teamData })
+  return res.data
+}
+
 export const updateTeam = async (team_id, teamData) => {
   const res = await backendUrl.put(`/teams/${team_id}`, { team: teamData })
   return res.data
