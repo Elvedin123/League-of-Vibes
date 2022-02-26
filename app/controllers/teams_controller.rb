@@ -38,6 +38,6 @@ end
     @team = Team.find(params[:id])
   end
   def team_params
-    params.require(:team).permit( :champ1_img, :champ2_img, :champ3_img, :champ4_img, :champ5_img, :description, :user_id)
+    params.require(:team).permit( :champ1_img, :champ2_img, :champ3_img, :champ4_img, :champ5_img, :description, :user_id, :username)
   end
 end
