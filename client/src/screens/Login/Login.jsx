@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import { loginUser } from '../../services/user.js'
 import { useNavigate } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 
 export default function Login(props) {
   const [formData, setFormData] = useState({
@@ -30,6 +31,7 @@ export default function Login(props) {
         <input type="text" onChange={handleChange} value={formData.password} id='password' />
       </label>
       <button>Enter the Rift!</button>
+      <h3>Don't have an account?<Link to='/signup'><h3>Press here</h3></Link></h3>
     </form>
   )
 }

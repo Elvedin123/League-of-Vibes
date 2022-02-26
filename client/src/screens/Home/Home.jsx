@@ -1,7 +1,10 @@
 import { useState, useEffect, Link } from 'react'
-impor
+import Layout from '../../components/Layout'
 export default function Home() {
+
   return (
+
     <div>Home</div>
+
   )
 }
