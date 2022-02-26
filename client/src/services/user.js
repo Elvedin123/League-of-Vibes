@@ -1,4 +1,4 @@
-import { backendUrl } from "./backendAPI"
+import { backendUrl } from "./backendApi"
 
 
 export const loginUser = async (loginData) => {
