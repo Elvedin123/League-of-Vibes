@@ -29,5 +29,17 @@ export const getAllUsers = async () => {
 }
 
 export const getOneUser = async (user_id) => {
-  const res = await 
+  const res = await backendUrl.get(`/users/${user_id}
+  `)
+  return res.data
+}
+
+export const updateUser = async (user_id, updateData) => {
+  const res = await backendUrl.put(`/users/${user_id}`, { user: updateData })
+  return res.data
+}
+
+export const deleteUser = async (user_id) => {
+  const res = await backendUrl.delete(`/users/${user_id}`)
+  return res.data
 }
