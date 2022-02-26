@@ -31,7 +31,7 @@ export default function Login(props) {
         <input type="text" onChange={handleChange} value={formData.password} id='password' />
       </label>
       <button>Enter the Rift!</button>
-      <h3>Don't have an account?<Link to='/signup'><h3>Press here</h3></Link></h3>
+      <h3>Don't have an account?<Link to='/signup'>Press here</Link></h3>
     </form>
   )
 }

@@ -1,4 +1,4 @@
-import { backendUrl } from "./backendAPI";
+import { backendUrl } from "./backendApi.js";
 
 export const getAllTeams = async () => {
   const res = await backendUrl.get('/teams')
@@ -11,7 +11,7 @@ export const getOneTeam = async (team_id) => {
 }
 
 export const createTeam = async (teamData) => {
-  const res = await backendUrl.post(`/teams/${team_id}`, { team: teamData })
+  const res = await backendUrl.post('/teams', { team: teamData })
   return res.data
 }
 

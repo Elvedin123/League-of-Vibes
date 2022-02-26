@@ -14,6 +14,7 @@ function App() {
     const getUser = async () => {
       const user = await verifyUser()
       setCurrentUser(user)
+      console.log(user)
     }
     getUser()
   }, [])

@@ -17,8 +17,8 @@ export default function Nav(props) {
         </>
         :
         <>
-          <Link to='/'>League of Vibes</Link>
-
+          <h1><Link to='/'>League of Vibes</Link></h1>
+          <h3>Become a Legend!</h3>
         </>
 
       }

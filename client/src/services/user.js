@@ -4,6 +4,8 @@ import { backendUrl } from "./backendApi"
 export const loginUser = async (loginData) => {
   const res = await backendUrl.post('/auth/login', { authentication: loginData })
   localStorage.setItem('authToken', res.data.token)
+  localStorage.setItem('username', res.data.user.username)
+  // console.log(res.data.user.username)
   backendUrl.defaults.headers.common.authorization = `Bearer ${res.data.token}`
   return res.data.user
 }
