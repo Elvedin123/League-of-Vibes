@@ -7,6 +7,7 @@ import Signup from './screens/Signup/Signup.jsx';
 import Login from './screens/Login/Login.jsx';
 import Home from './screens/Home/Home.jsx';
 import Layout from './components/Layout.jsx';
+import Create from './screens/Create.jsx';
 function App() {
   const [currentUser, setCurrentUser] = useState(null)
   const navigate = useNavigate()
@@ -31,6 +32,7 @@ function App() {
           <Route path='/' element={<Login setCurrentUser={setCurrentUser} />} />
           <Route path='/home' element={<Home currentUser={currentUser} />} />
           <Route path='/signup' element={<Signup setCurrentUser={setCurrentUser} />} />
+          <Route path='/create' element={<Create />} />
         </Routes>
       </Layout>
     </div>

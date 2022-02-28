@@ -25,7 +25,7 @@ end
   end
   def update 
     @team.update(team_params)
-
+puts team_params
     render json: @team
   end
 def destroy
