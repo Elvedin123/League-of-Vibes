@@ -3,7 +3,7 @@ import { Link } from "react-router-dom"
 
 export default function Nav(props) {
   const { logout, currentUser } = props
-  console.log(currentUser)
+  // console.log(currentUser)
 
   return (
     <div>
