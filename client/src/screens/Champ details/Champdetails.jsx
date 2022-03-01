@@ -9,7 +9,7 @@ export default function Champdetails() {
     const fetchChamp = async () => {
       const champ = await getChampion(id)
       setChampion(champ)
-      // console.log(champ)\
+
     }
     fetchChamp()
   }, [id])

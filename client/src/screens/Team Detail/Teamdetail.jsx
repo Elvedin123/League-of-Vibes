@@ -9,11 +9,11 @@ export default function Teamdetail() {
     const getTeam = async () => {
       const oneTeam = await getOneTeam(id)
       setTeam(oneTeam)
-      console.log(oneTeam)
+
     }
     getTeam()
   }, [id])
-  console.log(team)
+
   return (
     <div>
       <h1>Team Detail</h1>

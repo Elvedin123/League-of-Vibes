@@ -12,9 +12,10 @@ import Champdetails from './screens/Champ details/Champdetails.jsx';
 import Teamdetail from './screens/Team Detail/Teamdetail.jsx';
 import Profile from './screens/Profile page/Profile.jsx';
 
-const teamcomp = []
-console.log(teamcomp)
+
+
 function App() {
+  const [teamcomp, setTeamcomp] = useState([]);
   const [currentUser, setCurrentUser] = useState(null)
   const navigate = useNavigate()
 
@@ -22,7 +23,7 @@ function App() {
     const getUser = async () => {
       const user = await verifyUser()
       setCurrentUser(user)
-      // console.log(user)
+
     }
     getUser()
   }, [])
@@ -41,7 +42,7 @@ function App() {
           <Route path="/profile" element={<Profile currentUser={currentUser} />} />
           <Route path='/teamdetails/:id' element={<Teamdetail />} />
           <Route path='/signup' element={<Signup setCurrentUser={setCurrentUser} />} />
-          <Route path='/create' element={<Create teamcomp={teamcomp} />} />
+          <Route path='/create' element={<Create teamcomp={teamcomp} setTeamcomp={setTeamcomp} />} />
           <Route path='/champdetail/:id' element={<Champdetails />} />
         </Routes>
       </Layout>

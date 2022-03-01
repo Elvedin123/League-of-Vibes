@@ -6,24 +6,25 @@ import { createTeam } from "../services/teamPost.js"
 import { useNavigate } from "react-router-dom"
 
 export default function Create(props) {
+
   const [champions, setChampions] = useState([])
   const teampost = {
-    champ1_img: props.teamcomp,
-    champ2_img: props.teamcomp,
-    champ3_img: props.teamcomp,
-    champ4_img: props.teamcomp,
-    champ5_img: props.teamcomp,
+    champ1_img: props.teamcomp[0],
+    champ2_img: props.teamcomp[1],
+    champ3_img: props.teamcomp[2],
+    champ4_img: props.teamcomp[3],
+    champ5_img: props.teamcomp[4],
     description: ""
   }
   const [formData, setFormData] = useState(teampost)
   const navigate = useNavigate()
-  // console.log(formData.description)
+
 
   useEffect(() => {
     const fetchChampions = async () => {
       const allChampions = await getAllChampions()
       setChampions(allChampions)
-      // console.log(allChampions)
+
     }
     fetchChampions()
   }, [])
@@ -42,14 +43,15 @@ export default function Create(props) {
       {champions.map(champion => {
 
         return (
-          <div>
-            <div key={champion.id} >
+          <div key={champion.id}>
+            <div  >
               <Link to={`/champdetail/${champion.id}`}>
                 <h3>{champion.name}</h3>
                 <img src={champion.img} alt="" />
               </Link>
             </div>
-            <Addbutton championimg={champion.img} teamcomp={props.teamcomp} id={champion.id} />
+            <Addbutton championimg={champion.img} teamcomp={props.teamcomp} id={champion.id}
+              setTeamcomp={props.setTeamcomp} />
           </div>
         )
       })}
@@ -68,7 +70,16 @@ export default function Create(props) {
         </div>
         <form onSubmit={async (e) => {
           e.preventDefault()
-          await createTeam(formData)
+          const team = {
+            champ1_img: props.teamcomp[0],
+            champ2_img: props.teamcomp[1],
+            champ3_img: props.teamcomp[2],
+            champ4_img: props.teamcomp[3],
+            champ5_img: props.teamcomp[4],
+            description: formData.description
+          }
+          await createTeam(team)
+          props.setTeamcomp([])
           navigate('/home')
         }}>
           <label>Description

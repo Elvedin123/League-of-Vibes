@@ -21,7 +21,7 @@ export default function Home() {
     const fetchAllChampions = async () => {
       const allTeams = await getAllTeams()
       setTeams(allTeams)
-      console.log(allTeams)
+
     }
     fetchAllUsers()
     fetchAllChampions()

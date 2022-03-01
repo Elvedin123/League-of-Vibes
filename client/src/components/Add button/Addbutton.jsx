@@ -2,12 +2,12 @@ import React from 'react'
 
 
 export default function Addbutton(props) {
-  const { championimg, teamcomp } = props
-  // console.log(championimg)
+  const { championimg, teamcomp, setTeamcomp } = props
+
 
   const handleAdd = (e) => {
     if (teamcomp.length < 5) {
-      teamcomp.push(championimg)
+      setTeamcomp((prevTeamcomp) => [...prevTeamcomp, championimg])
     }
 
   }
