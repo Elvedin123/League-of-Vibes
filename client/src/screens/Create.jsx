@@ -2,18 +2,22 @@ import { getAllChampions } from "../services/champions.js"
 import { useEffect, useState } from "react"
 import { Link } from "react-router-dom"
 import Addbutton from "../components/Add button/Addbutton.jsx"
+import { createTeam } from "../services/teamPost.js"
+import { useNavigate } from "react-router-dom"
 
 export default function Create(props) {
   const [champions, setChampions] = useState([])
   const teampost = {
-    champ1_img: props.teamcomp[0],
-    champ2_img: props.teamcomp[1],
-    champ3_img: props.teamcomp[2],
-    champ4_img: props.teamcomp[3],
-    champ5_img: props.teamcomp[4],
+    champ1_img: props.teamcomp,
+    champ2_img: props.teamcomp,
+    champ3_img: props.teamcomp,
+    champ4_img: props.teamcomp,
+    champ5_img: props.teamcomp,
     description: ""
   }
-  console.log(props.teamcomp)
+  const [formData, setFormData] = useState(teampost)
+  const navigate = useNavigate()
+  // console.log(formData.description)
 
   useEffect(() => {
     const fetchChampions = async () => {
@@ -23,6 +27,14 @@ export default function Create(props) {
     }
     fetchChampions()
   }, [])
+
+  const handleChange = (e) => {
+    const { id, value } = e.target;
+    setFormData((prevState) => ({
+      ...prevState,
+      [id]: value,
+    }));
+  };
 
   return (
     <div>
@@ -54,10 +66,15 @@ export default function Create(props) {
           <div><p></p></div>
           <button>Post!</button>
         </div>
-        <form>
+        <form onSubmit={async (e) => {
+          e.preventDefault()
+          await createTeam(formData)
+          navigate('/home')
+        }}>
           <label>Description
-            <input type="text" value={teampost.description} />
+            <input type="text" onChange={handleChange} value={formData.description} id="description" />
           </label>
+          <button>Submit</button>
         </form>
       </div>
     </div>
