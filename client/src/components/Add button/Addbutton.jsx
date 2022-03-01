@@ -5,7 +5,7 @@ export default function Addbutton(props) {
   const { championimg, teamcomp, setTeamcomp } = props
 
 
-  const handleAdd = (e) => {
+  const handleAdd = () => {
     if (teamcomp.length < 5) {
       setTeamcomp((prevTeamcomp) => [...prevTeamcomp, championimg])
     }

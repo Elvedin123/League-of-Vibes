@@ -4,6 +4,7 @@ import { Link } from "react-router-dom"
 import Addbutton from "../components/Add button/Addbutton.jsx"
 import { createTeam } from "../services/teamPost.js"
 import { useNavigate } from "react-router-dom"
+import DeleteChamp from "../components/DeleteChamp/DeleteChamp.jsx"
 
 export default function Create(props) {
 
@@ -61,12 +62,11 @@ export default function Create(props) {
             return (
               <div key={img.indexOf(0)}>
                 <img src={img} alt="'''"></img>
-                <button>delete</button>
+                <DeleteChamp setTeamcomp={props.setTeamcomp} teamcomp={props.teamcomp} img={img} />
               </div>
             )
           })}
-          <div><p></p></div>
-          <button>Post!</button>
+
         </div>
         <form onSubmit={async (e) => {
           e.preventDefault()
