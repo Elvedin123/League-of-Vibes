@@ -10,6 +10,7 @@ import Layout from './components/Layout.jsx';
 import Create from './screens/Create.jsx';
 import Champdetails from './screens/Champ details/Champdetails.jsx';
 import Teamdetail from './screens/Team Detail/Teamdetail.jsx';
+import Profile from './screens/Profile page/Profile.jsx';
 
 const teamcomp = []
 console.log(teamcomp)
@@ -37,6 +38,7 @@ function App() {
         <Routes>
           <Route path='/' element={<Login setCurrentUser={setCurrentUser} />} />
           <Route path='/home' element={<Home currentUser={currentUser} />} />
+          <Route path="/profile" element={<Profile currentUser={currentUser} />} />
           <Route path='/teamdetails/:id' element={<Teamdetail />} />
           <Route path='/signup' element={<Signup setCurrentUser={setCurrentUser} />} />
           <Route path='/create' element={<Create teamcomp={teamcomp} />} />

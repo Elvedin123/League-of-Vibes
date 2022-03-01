@@ -58,7 +58,7 @@ export default function Create(props) {
           {props.teamcomp.map(img => {
             return (
               <div>
-                <img src={img}></img>
+                <img src={img} alt="'''"></img>
                 <button>delete</button>
               </div>
             )
