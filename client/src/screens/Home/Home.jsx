@@ -3,9 +3,13 @@ import { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import { getAllTeams } from '../../services/teamPost'
 import { getAllUsers } from '../../services/user'
+import { useParams } from 'react-router-dom'
+
+
 export default function Home() {
   const [teams, setTeams] = useState([])
   const [users, setUsers] = useState([])
+  const { id } = useParams()
   // const { currentUser } = props
   // const user = localStorage.getItem("username")
 
@@ -21,32 +25,35 @@ export default function Home() {
     }
     fetchAllUsers()
     fetchAllChampions()
-  }, [])
+  }, [id])
 
   return (
 
-    <div>{
-      teams.map(team => {
+    <div>
 
-        return (
-          <Link to='/teamdetails' key={team.id}>
-            <div>
-              {users.map(user => {
-                return (user.id === team.user_id ? <h2 key={user.id}>{user.username}'s Team Comp</h2> :
-                  null
-                )
-              })}
-              <img src={team.champ1_img} alt={team.username} />
-              <img src={team.champ2_img} alt={team.username} />
-              <img src={team.champ3_img} alt={team.username} />
-              <img src={team.champ4_img} alt={team.username} />
-              <img src={team.champ5_img} alt={team.username} />
-            </div>
-          </Link>
-        )
 
-      })
-    }</div>
+      {
+        teams.map(team => {
+
+          return (
+            <Link to={`/teamdetails/${team.id}`} key={team.id}>
+              <div>
+                {users.map(user => {
+                  return (user.id === team.user_id ? <h2 key={user.id}>{user.username}'s Team Comp</h2> :
+                    null
+                  )
+                })}
+                <img src={team.champ1_img} alt={team.username} />
+                <img src={team.champ2_img} alt={team.username} />
+                <img src={team.champ3_img} alt={team.username} />
+                <img src={team.champ4_img} alt={team.username} />
+                <img src={team.champ5_img} alt={team.username} />
+              </div>
+            </Link>
+          )
+
+        })
+      }</div>
 
   )
 }
