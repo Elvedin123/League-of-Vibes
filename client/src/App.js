@@ -40,7 +40,7 @@ function App() {
           <Route path='/' element={<Login setCurrentUser={setCurrentUser} />} />
           <Route path='/home' element={<Home currentUser={currentUser} />} />
           <Route path="/profile" element={<Profile currentUser={currentUser} />} />
-          <Route path='/teamdetails/:id' element={<Teamdetail />} />
+          <Route path='/teamdetails/:id' element={<Teamdetail currentUser={currentUser} />} />
           <Route path='/signup' element={<Signup setCurrentUser={setCurrentUser} />} />
           <Route path='/create' element={<Create teamcomp={teamcomp} setTeamcomp={setTeamcomp} />} />
           <Route path='/champdetail/:id' element={<Champdetails />} />

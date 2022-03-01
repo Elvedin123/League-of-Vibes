@@ -1,8 +1,8 @@
 import { useState, useEffect } from "react"
 import { getOneTeam } from "../../services/teamPost"
 import { useParams } from "react-router-dom"
-
-export default function Teamdetail() {
+import Deletepost from "../../components/Delete Post/Deletepost"
+export default function Teamdetail(props) {
   const [team, setTeam] = useState([])
   const { id } = useParams()
   useEffect(() => {
@@ -33,6 +33,17 @@ export default function Teamdetail() {
       <div>
         <p>{team?.description}</p>
       </div>
+      {
+        props.currentUser?.id === team?.user_id ?
+          <>
+
+            <Deletepost team={team?.id} />
+
+          </>
+          :
+          null
+      }
+
     </div>
   )
 }

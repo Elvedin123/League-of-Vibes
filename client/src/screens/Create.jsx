@@ -59,7 +59,7 @@ export default function Create(props) {
         <div>
           {props.teamcomp.map(img => {
             return (
-              <div>
+              <div key={img.indexOf(0)}>
                 <img src={img} alt="'''"></img>
                 <button>delete</button>
               </div>

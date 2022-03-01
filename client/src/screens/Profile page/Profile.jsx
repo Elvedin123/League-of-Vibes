@@ -1,9 +1,9 @@
 import React from 'react'
 import { verifyUser } from '../../services/user'
 import { useState, useEffect } from 'react'
-
 import { useParams } from 'react-router-dom'
 import { getAllTeams } from '../../services/teamPost'
+import Deletepost from '../../components/Delete Post/Deletepost'
 
 export default function Profile(props) {
   const [user, setUser] = useState()
@@ -31,15 +31,18 @@ export default function Profile(props) {
     <div>
       <div>
         {teams.map(team => {
+
           return (
             <div key={team.id}>
-              {/* {team.user_id === user.id ? <div>
+              {team.user_id === user.id ? <div>
                 <img src={team?.champ1_img} alt="top" />
                 <img src={team?.champ2_img} alt="jng" />
                 <img src={team?.champ3_img} alt="mid" />
                 <img src={team?.champ4_img} alt="adc" />
                 <img src={team?.champ5_img} alt="sup" />
-              </div> : null} */}
+                <Deletepost team={team.id} currentuser={props.currentUser} />
+              </div> : null}
+
             </div>
           )
 
