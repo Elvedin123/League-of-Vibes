@@ -18,21 +18,26 @@ export default function Login(props) {
     }));
   };
   return (
-    <form onSubmit={async (e) => {
-      e.preventDefault()
-      const res = await loginUser(formData)
-      props.setCurrentUser(res)
+    <div className={logincss.container}>
+      <h3 className={logincss.legends}>Become a Legend!</h3>
+      <div className={logincss.form_container}>
+        <form className={logincss.form} onSubmit={async (e) => {
+          e.preventDefault()
+          const res = await loginUser(formData)
+          props.setCurrentUser(res)
 
-      navigate('/home')
-    }}>
-      <label>Username
-        <input type="text" onChange={handleChange} value={formData.username} id='username' />
-      </label>
-      <label>Password
-        <input type="text" onChange={handleChange} value={formData.password} id='password' />
-      </label>
-      <button>Enter the Rift!</button>
-      <h3>Don't have an account?<Link to='/signup'>Press here</Link></h3>
-    </form>
+          navigate('/home')
+        }}>
+          <label>Username
+            <input className={logincss.input} type="text" onChange={handleChange} value={formData.username} id='username' />
+          </label>
+          <label>Password
+            <input className={logincss.input} type="text" onChange={handleChange} value={formData.password} id='password' />
+          </label>
+          <button className={logincss.button}>Enter the Rift!</button>
+          <h3 className={logincss.noacc}>Don't have an account?<Link className={logincss.presshere} to='/signup'><button className={logincss.pressbutton}>Press here</button></Link></h3>
+        </form>
+      </div>
+    </div>
   )
 }

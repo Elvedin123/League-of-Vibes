@@ -20,7 +20,7 @@ export default function Nav(props) {
           <nav className={navcss.preauth_login_nav}>
             <h1 ><Link className={navcss.preauth_title} to='/'>League of Vibes</Link></h1>
           </nav>
-          <h3>Become a Legend!</h3>
+
         </>
 
       }
