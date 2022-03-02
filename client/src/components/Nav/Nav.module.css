@@ -1,10 +1,12 @@
-@media screen and (max-width:5000px) {
+@media screen and (max-width:500px) {
   .preauth_login_nav{
     background-color: rgb(68, 90, 138);
     border: 2px solid rgb(255,215,0);
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
+    width: 100%;
+    max-width: 800px;
     align-content: center;
     justify-content: space-between;
     box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.478);
