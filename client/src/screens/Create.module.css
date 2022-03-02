@@ -1,0 +1,66 @@
+@media screen and (max-width:500px){
+  .selecttitle{
+    text-decoration: none;
+    font-family: Friz Quadrata Regular;
+    font-size: 26px;
+    color: rgb(255,215,0);
+  }
+  .champname{
+    text-decoration: none;
+    font-family: Friz Quadrata Regular;
+    font-size: 26px;
+    color: rgb(255,215,0);
+  }
+  .mainchampcontain{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  grid-gap: 10px;
+  place-items: center;
+flex-direction: column;
+align-items: center;
+background-color: rgb(159, 163, 163);
+max-width: 500px;
+width: 100%;
+max-height: 370px;
+height: 100%;
+overflow: scroll;
+border-radius: 5%;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.478); 
+  }
+  .champcontainer{
+    display: flex;
+    flex-direction: column;
+  }
+  .img{
+    max-width: 100px;
+  }
+  .compcontainer{
+    display: flex;
+    max-height: 250px;
+    flex-direction: column;
+    align-items: center;
+  }
+  .comparray{
+    display: flex;
+    flex-direction: row;
+    background-color: rgb(159, 163, 163);
+    border-radius: 5%;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.478); 
+    overflow-y: hidden;
+    overflow-x: scroll;
+    max-height: 250px;
+    max-width: 300px;
+    height: 100%;
+    margin: 20px;
+  }
+  .arrimg{
+    max-width: 80px;
+    margin: 5px;
+  }
+  .description{
+    text-decoration: none;
+    font-family: Friz Quadrata Regular;
+    font-size: 20px;
+    color: rgb(255,215,0);
+  }
+}

@@ -17,6 +17,18 @@
     font-size: 26px;
     color: rgb(255,215,0);
   }
+  .description{
+    text-decoration: none;
+    font-family: Friz Quadrata Regular;
+    font-size: 26px;
+    color: rgb(255,215,0);
+  }
+  .p{
+    text-decoration: none;
+    font-family: Friz Quadrata Regular;
+    font-size: 18px;
+    color: rgb(255,215,0);
+  }
   .teamcontainer{
     display: flex;
 flex-direction: column;

@@ -5,6 +5,7 @@ import Addbutton from "../components/Add button/Addbutton.jsx"
 import { createTeam } from "../services/teamPost.js"
 import { useNavigate } from "react-router-dom"
 import DeleteChamp from "../components/DeleteChamp/DeleteChamp.jsx"
+import createcss from './Create.module.css'
 
 export default function Create(props) {
 
@@ -40,28 +41,34 @@ export default function Create(props) {
 
   return (
     <div>
-      <h1>Select Your Champions</h1>
-      {champions.map(champion => {
+      <h1 className={createcss.selecttitle}>Select Your Champions</h1>
+      <div className={createcss.mainchampcontain}>
+        {champions.map(champion => {
 
-        return (
-          <div key={champion.id}>
-            <div  >
-              <Link to={`/champdetail/${champion.id}`}>
-                <h3>{champion.name}</h3>
-                <img src={champion.img} alt="" />
-              </Link>
+          return (
+
+            <div key={champion.id}>
+              <div className={createcss.champcontainer}>
+                <h3 className={createcss.champname}>
+                  {champion.name}
+                </h3>
+                <Link to={`/champdetail/${champion.id}`}>
+
+                  <img className={createcss.img} src={champion.img} alt="" />
+                </Link>
+              </div>
+              <Addbutton championimg={champion.img} teamcomp={props.teamcomp} id={champion.id}
+                setTeamcomp={props.setTeamcomp} />
             </div>
-            <Addbutton championimg={champion.img} teamcomp={props.teamcomp} id={champion.id}
-              setTeamcomp={props.setTeamcomp} />
-          </div>
-        )
-      })}
-      <div>
-        <div>
+          )
+        })}
+      </div>
+      <div className={createcss.compcontainer}>
+        <div className={createcss.comparray}>
           {props.teamcomp.map(img => {
             return (
               <div key={img.indexOf(0)}>
-                <img src={img} alt="'''"></img>
+                <img className={createcss.arrimg} src={img} alt=""></img>
                 <DeleteChamp setTeamcomp={props.setTeamcomp} teamcomp={props.teamcomp} img={img} />
               </div>
             )
@@ -82,7 +89,7 @@ export default function Create(props) {
           props.setTeamcomp([])
           navigate('/home')
         }}>
-          <label>Description
+          <label className={createcss.description}>Description
             <input type="text" onChange={handleChange} value={formData.description} id="description" />
           </label>
           <button>Submit</button>

@@ -83,7 +83,8 @@ export default function Teamdetail(props) {
           </div>
         </div>
         <div>
-          <p>{team?.description}</p>
+          <h2 className={teamdetailcss.description}>Description</h2>
+          <p className={teamdetailcss.p}>{team?.description}</p>
         </div>
         {
           props.currentUser?.id === team?.user_id ?
