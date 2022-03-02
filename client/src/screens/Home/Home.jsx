@@ -37,7 +37,7 @@ export default function Home() {
         teams.map(team => {
 
           return (
-            <div >
+            <div key={team.id}>
               {users.map(user => {
                 return (user.id === team.user_id ?
                   <h2
