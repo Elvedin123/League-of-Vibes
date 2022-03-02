@@ -1,4 +1,4 @@
-import { backendUrl } from "./backendApi";
+import { backendUrl } from "./apibackend.js";
 
 export const getAllTeams = async () => {
   const res = await backendUrl.get('/teams')
