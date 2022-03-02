@@ -1,8 +1,5 @@
 @media screen and (max-width:420px){
-  body{
-    background-color: rgb(80, 82, 82);
-  }
-  .legends{
+  .signup{
     font-family: Friz Quadrata Regular;
     font-size: 26px;
     color: rgb(255,215,0);
@@ -19,20 +16,20 @@
     border-radius: 5%;
     box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.478); 
   }
-.form{
-  display: flex;
-  flex: wrap ;
-  flex-direction: column;
-  width:80%; 
-  margin:50px auto; 
-  height: 80%;
-    text-align:center;
-    align-items: center;
-}
+  .form{
+    display: flex;
+    flex: wrap ;
+    flex-direction: column;
+    width:80%; 
+    margin:50px auto; 
+    height: 80%;
+      text-align:center;
+      align-items: center;
+  }
 .input{
-  margin-bottom: 20px;
+  margin-bottom: 20px; 
 }
-.button{
+.enterrift{
   border-radius: 10%;
 
   padding: 10px;
@@ -41,21 +38,8 @@
   color: rgb(0, 0, 0);
   transition-duration: 0.4s;
 }
-
-.button:hover{
+.enterrift:hover{
   background-color: #000000;
   color: rgb(255,215,0);
-}
-.noacc{
-  font-size: 18px;
-  font-family: Friz Quadrata Regular;
-}
-.presshere{
-  text-decoration: none;
-  color: rgb(0, 0, 0);
- 
-}
-.pressbutton{
-  border: 2px solid black;
 }
 }

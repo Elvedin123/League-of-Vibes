@@ -3,7 +3,7 @@ import { useState } from "react"
 
 
 export default function Editcomment(props) {
-  console.log(props)
+
   const default_input = {
     content: props.comment
   }

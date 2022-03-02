@@ -1,7 +1,7 @@
 import React from 'react'
 import footercss from './Footer.module.css'
 
-import { FaBeer } from "react-icons/fa";
+
 import { AiFillGithub } from "react-icons/ai"
 import { AiFillLinkedin } from "react-icons/ai"
 import { AiFillInstagram } from "react-icons/ai"
