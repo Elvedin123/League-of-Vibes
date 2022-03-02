@@ -12,6 +12,61 @@
 .preauth_title{
   text-decoration: none;
   color: rgb(255,215,0);
+  font-size: 30px;
   font-family: Friz Quadrata Regular;
+}
+.auth_login_nav{
+  background-color: rgb(68, 90, 138);
+  border: 2px solid rgb(255,215,0);
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-content: center;
+  justify-content: space-between;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.478);
+}
+.authtitle{
+  text-decoration: none;
+  color: rgb(255,215,0);
+  font-size: 30px;
+  font-family: Friz Quadrata Regular;
+}
+.maincontainer{
+  display: flex;
+  align-items: center;
+  margin-left: 20px;
+}
+.titlecontainer{
+  position: relative;
+width: 65vw;
+}
+.navlink{
+  display: flex;
+  flex-direction: column;
+  padding-left: 20px;
+  width: 25vw;
+}
+.welcome{
+  color: rgb(255,215,0);
+}
+.create{
+  text-decoration: none;
+  font-size: 13px;
+  color: rgb(255,215,0);
+  margin-bottom: 10px;
+}
+.profile{
+  color:rgb(255,215,0) ;
+  margin-bottom: 10px;
+  font-size: 13px;
+  text-decoration: none;
+}
+.logout{
+  color:rgb(255,215,0);
+  font-size: 20px;
+}
+.logout:hover{
+  color: aliceblue;
+cursor: pointer;
 }
 }
