@@ -7,7 +7,7 @@ export default function Layout(props) {
   return (
     <div>
       <Nav currentUser={currentUser} logout={logout} />
-      <div>
+      <div className="parent">
         {props.children}
       </div>
       <Footer />

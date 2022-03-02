@@ -1,0 +1,82 @@
+@media screen and (max-width:500px){
+  .maincontainer{
+    display: flex;
+    max-height: 100vh;
+    height: 100%;
+   width: 100%;
+   max-width: 300px;
+    margin-top: 20px;
+    overflow: scroll;
+     align-items: center;
+   margin-bottom: 40px;
+     flex-direction: column;
+  }
+  .teamdetail{
+    text-decoration: none;
+    font-family: Friz Quadrata Regular;
+    font-size: 26px;
+    color: rgb(255,215,0);
+  }
+  .teamcontainer{
+    display: flex;
+flex-direction: column;
+position: relative;
+align-items: center;
+background-color: rgb(159, 163, 163);
+overflow: scroll;
+padding-bottom: 10px;
+width: 100%;
+height: 200px;
+max-width: 10;
+border-radius: 5%;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.478); 
+  }
+  .champlane{
+    display: flex;
+    flex-direction: column;
+  }
+  .img{
+    max-width: 150px;
+    
+  }
+  .commentmaincontainer{
+    display: flex;
+    max-height: 150px;
+    margin-top: 20px;
+    max-width: 300px;
+    overflow: scroll;
+     align-items: center;
+   margin-bottom: 40px;
+     flex-direction: column;
+  }
+  .commentcontainer{
+    display: flex;
+flex-direction: column;
+align-items: center;
+background-color: rgb(159, 163, 163);
+max-width: 300px;
+width: 100%;
+height: 50%;
+overflow: scroll;
+border-radius: 5%;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.478); 
+  }
+  .comments{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 300px;
+  }
+  .content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: white;
+    border-radius: 30%;
+    width: 100%;
+    text-align: center;
+  }
+  .buttons{
+    display: flex;
+  }
+}

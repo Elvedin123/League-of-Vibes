@@ -25,7 +25,7 @@ export default function Commentform(props) {
       await createComment(id, comment)
       window.location.reload(false)
     }}>
-      <textarea type="text" id="content" value={comment.content} onChange={handleChange} cols="30" rows="10"></textarea>
+      <textarea type="text" id="content" value={comment.content} onChange={handleChange} cols="30" rows="3"></textarea>
       <button>Submit</button>
     </form>
   )
