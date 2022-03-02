@@ -36,7 +36,7 @@ export default function Nav(props) {
                 Profile
               </Link>
               <a className={navcss.logout}
-                href="http://localhost:3001/"
+                href="https://modest-cray-0cd808.netlify.app/"
                 onClick={logout}>
                 <BiLogOut />
               </a>
