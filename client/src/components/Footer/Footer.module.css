@@ -1,12 +1,13 @@
-@media screen and (max-width:420px){
+@media screen and (max-width:500px){
  .footer{
    display: flex;
   position: fixed;
   left: 0;
   bottom: 0;
-  width: 100%;
+  width: 99vw;
   height: 4rem;
   background-color: rgb(68, 90, 138);
+  border: 2px solid rgb(255,215,0);
   color: white;
   text-align: center;
   flex-direction: row;

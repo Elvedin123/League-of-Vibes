@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom'
 import { getAllTeams } from '../../services/teamPost'
 import { getAllUsers } from '../../services/user'
 import { useParams } from 'react-router-dom'
+import homecss from "./Home.module.css"
 
 
 export default function Home() {
@@ -29,27 +30,53 @@ export default function Home() {
 
   return (
 
-    <div>
+    <div className={homecss.maincontainer}>
 
 
       {
         teams.map(team => {
 
           return (
-            <Link to={`/teamdetails/${team.id}`} key={team.id}>
-              <div>
-                {users.map(user => {
-                  return (user.id === team.user_id ? <h2 key={user.id}>{user.username}'s Team Comp</h2> :
-                    null
-                  )
-                })}
-                <img src={team.champ1_img} alt={team.username} />
-                <img src={team.champ2_img} alt={team.username} />
-                <img src={team.champ3_img} alt={team.username} />
-                <img src={team.champ4_img} alt={team.username} />
-                <img src={team.champ5_img} alt={team.username} />
-              </div>
-            </Link>
+            <div >
+              {users.map(user => {
+                return (user.id === team.user_id ?
+                  <h2
+                    className={homecss.userteam}
+                    key={user.id}>{user.username}'s Team Comp</h2> :
+                  null
+                )
+              })}
+
+              <Link
+                to={`/teamdetails/${team.id}`}
+                key={team.id}>
+
+
+                <div className={homecss.imgcontainer}>
+
+                  <img
+                    className={homecss.img} src={team.champ1_img}
+                    alt={team.username} />
+
+
+                  <img
+                    className={homecss.img}
+                    src={team.champ2_img}
+                    alt={team.username} />
+
+                  <img
+                    className={homecss.img} src={team.champ3_img} alt={team.username} />
+
+                  <img
+                    className={homecss.img} src={team.champ4_img} alt={team.username} />
+
+                  <img
+                    className={homecss.img} src={team.champ5_img} alt={team.username} />
+
+                </div>
+
+              </Link>
+            </div>
           )
 
         })

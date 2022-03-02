@@ -1,4 +1,4 @@
-@media screen and (max-width:420px){
+@media screen and (max-width:5000px){
   .signup{
     font-family: Friz Quadrata Regular;
     font-size: 26px;
@@ -13,8 +13,7 @@
   .form_container{
     background-color: rgb(159, 163, 163);
     max-width: 60vw;
-    border-radius: 5%;
-    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.478); 
+    
   }
   .form{
     display: flex;
