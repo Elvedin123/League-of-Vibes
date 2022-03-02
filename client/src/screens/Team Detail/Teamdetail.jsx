@@ -5,6 +5,7 @@ import Deletepost from "../../components/Delete Post/Deletepost"
 import { getTeamComments } from "../../services/comments"
 import Commentform from "../../components/Comment form/Commentform"
 import Deletecomment from "../../components/Delete comment/Deletecomment"
+import Editcomment from "../../components/Edit comment/Editcomment"
 
 export default function Teamdetail(props) {
   const [team, setTeam] = useState([])
@@ -61,7 +62,11 @@ export default function Teamdetail(props) {
           return (comment.team_id === team.id ?
             <div key={comment.id}>
               <p>{comment.content}</p>
-              <Deletecomment comment={comment.id} teamid={props.team_id} />
+              <div>
+                <Deletecomment comment={comment.id} teamid={props.team_id} />
+                <Editcomment teamid={comment.team_id} comment={comment.content} commentid={comment.id} />
+              </div>
+
             </div> : null
 
           )

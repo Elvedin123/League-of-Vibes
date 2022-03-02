@@ -17,7 +17,7 @@ export default function Commentform(props) {
       [id]: value,
     }))
   }
-  console.log(props)
+
   return (
 
     <form onSubmit={async (e) => {
