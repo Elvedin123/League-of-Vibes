@@ -1,0 +1,39 @@
+@media screen and (max-width:500px){
+  .maincontainer{
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+  .usercontainer{
+    background-color: white;
+    border-radius: 10%;
+    max-width: 300px;
+    width: 100%;
+    margin-top: 10px;
+  }
+  .welcome{
+    font-size: 18px;
+  }
+  .img {
+    border-radius: 100%;
+    max-width: 100px;
+  }
+  .champarr{
+    display: flex;
+flex-direction: row;
+align-items: center;
+background-color: rgb(159, 163, 163);
+overflow-y: hidden;
+overflow-x:scroll;
+max-width: 300px;
+width: 100%;
+border-radius: 5%;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.478); 
+    margin: 10px;
+  }
+  .champimg{
+    max-width: 150px;
+    max-height: 88px;
+    margin: 10px;
+  }
+}

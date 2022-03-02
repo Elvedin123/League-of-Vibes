@@ -4,6 +4,7 @@ import { useState, useEffect } from 'react'
 import { useParams } from 'react-router-dom'
 import { getAllTeams } from '../../services/teamPost'
 import Deletepost from '../../components/Delete Post/Deletepost'
+import profilecss from './Profile.module.css'
 
 export default function Profile(props) {
   const [user, setUser] = useState()
@@ -28,29 +29,40 @@ export default function Profile(props) {
   }, [id])
 
   return (
-    <div>
+    <div className={profilecss.maincontainer}>
       <div>
         {teams.map(team => {
 
           return (
             <div key={team.id}>
-              {team.user_id === user.id ? <div>
-                <img src={team?.champ1_img} alt="top" />
-                <img src={team?.champ2_img} alt="jng" />
-                <img src={team?.champ3_img} alt="mid" />
-                <img src={team?.champ4_img} alt="adc" />
-                <img src={team?.champ5_img} alt="sup" />
-                <Deletepost team={team.id} currentuser={props.currentUser} />
-              </div> : null}
+              {team.user_id === user.id ?
+                <div className={profilecss.champarr} >
+                  <img
+                    className={profilecss.champimg}
+                    src={team?.champ1_img} alt="top" />
+                  <img
+                    className={profilecss.champimg}
+                    src={team?.champ2_img} alt="jng" />
+                  <img
+                    className={profilecss.champimg}
+                    src={team?.champ3_img} alt="mid" />
+                  <img
+                    className={profilecss.champimg}
+                    src={team?.champ4_img} alt="adc" />
+                  <img
+                    className={profilecss.champimg}
+                    src={team?.champ5_img} alt="sup" />
+                  <Deletepost team={team.id} currentuser={props.currentUser} />
+                </div> : null}
 
             </div>
           )
 
         })}
       </div>
-      <div>
-        <h1>Welcome, {user?.first_name}</h1>
-        <img src={user?.img_url} alt="" />
+      <div className={profilecss.usercontainer}>
+        <h1 className={profilecss.welcome}>Welcome, {user?.first_name}</h1>
+        <img className={profilecss.img} src={user?.img_url} alt="" />
       </div>
 
     </div>
