@@ -1,0 +1,16 @@
+@media screen and (max-width:376px) {
+  .preauth_login_nav{
+    background-color: aqua;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-content: center;
+    justify-content: space-between;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.478);
+}
+.preauth_title{
+  text-decoration: none;
+  color: black;
+  font-family: Friz Quadrata Regular;
+}
+}

@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom"
-
+import navcss from "./Nav.module.css"
 
 export default function Nav(props) {
   const { logout, currentUser } = props
@@ -17,7 +17,9 @@ export default function Nav(props) {
         </>
         :
         <>
-          <h1><Link to='/'>League of Vibes</Link></h1>
+          <nav className={navcss.preauth_login_nav}>
+            <h1 ><Link className={navcss.preauth_title} to='/'>League of Vibes</Link></h1>
+          </nav>
           <h3>Become a Legend!</h3>
         </>
 
