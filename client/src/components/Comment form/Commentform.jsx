@@ -17,12 +17,12 @@ export default function Commentform(props) {
       [id]: value,
     }))
   }
-
+  console.log(props)
   return (
 
     <form onSubmit={async (e) => {
       e.preventDefault()
-      await createComment(props.currentUser.id, comment)
+      await createComment(id, comment)
       window.location.reload(false)
     }}>
       <textarea type="text" id="content" value={comment.content} onChange={handleChange} cols="30" rows="10"></textarea>

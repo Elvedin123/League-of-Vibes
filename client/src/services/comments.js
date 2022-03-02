@@ -11,7 +11,7 @@ export const createComment = async (team_id, commentData) => {
 }
 
 export const updateComment = async (team_id, comment_id, commentData) => {
-  const res = await backendUrl.put(`/teams/${team_id}/comments/${comment_id}`, { comment: comment_id })
+  const res = await backendUrl.put(`/teams/${team_id}/comments/${comment_id}`, { comment: commentData })
   return res.data
 }
 

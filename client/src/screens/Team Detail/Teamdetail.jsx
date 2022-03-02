@@ -67,7 +67,7 @@ export default function Teamdetail(props) {
           )
         })}
       </div>
-      <div><Commentform currentUser={props.currentUser} /></div>
+      <div><Commentform /></div>
     </div>
   )
 }
