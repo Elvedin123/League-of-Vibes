@@ -1,0 +1,30 @@
+@media screen and (max-width:500px){
+  .detailtitle{
+    text-decoration: none;
+    font-family: Friz Quadrata Regular;
+    font-size: 26px;
+    color: rgb(255,215,0);
+  }
+  .maincontain{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 300px;
+    width: 100%;
+  }
+  .details{
+    display: flex;
+flex-direction: column;
+align-items: center;
+background-color: rgba(221, 221, 221, 0.7);
+box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.478); 
+  }
+  .imgcontain{
+    max-width: 300px;
+    width: 100%;
+  }
+  .img{
+    max-width: 300px;
+    width: 100%;
+  }
+}

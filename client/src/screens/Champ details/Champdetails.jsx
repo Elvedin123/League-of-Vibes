@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react"
 import { getChampion } from "../../services/champions"
 import { useParams } from "react-router-dom"
+import championdetailcss from './Champdetails.module.css'
 
 export default function Champdetails() {
   const [champion, setChampion] = useState([])
@@ -15,13 +16,13 @@ export default function Champdetails() {
   }, [id])
 
   return (
-    <div>
-      <h1>Champion Detail</h1>
+    <div className={championdetailcss.maincontain}>
+      <h1 className={championdetailcss.detailtitle}>Champion Detail</h1>
 
-      <div >
+      <div className={championdetailcss.imgcontain}>
         <img src={champion.img} alt={champion.name} />
       </div>
-      <div>
+      <div className={championdetailcss.details}>
 
         <div>
           <h2>{champion.name}</h2>
