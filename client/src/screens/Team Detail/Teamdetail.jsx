@@ -2,15 +2,27 @@ import { useState, useEffect } from "react"
 import { getOneTeam } from "../../services/teamPost"
 import { useParams } from "react-router-dom"
 import Deletepost from "../../components/Delete Post/Deletepost"
+import { getTeamComments } from "../../services/comments"
+import Commentform from "../../components/Comment form/Commentform"
+import Deletecomment from "../../components/Delete comment/Deletecomment"
+
 export default function Teamdetail(props) {
   const [team, setTeam] = useState([])
+  const [comments, setComments] = useState([])
   const { id } = useParams()
+
   useEffect(() => {
     const getTeam = async () => {
       const oneTeam = await getOneTeam(id)
       setTeam(oneTeam)
 
     }
+    const getComments = async () => {
+      const allComments = await getTeamComments(id)
+      setComments(allComments)
+
+    }
+    getComments()
     getTeam()
   }, [id])
 
@@ -43,7 +55,19 @@ export default function Teamdetail(props) {
           :
           null
       }
+      <div>
+        {comments.map(comment => {
 
+          return (comment.team_id === team.id ?
+            <div key={comment.id}>
+              <p>{comment.content}</p>
+              <Deletecomment comment={comment.id} teamid={props.team_id} />
+            </div> : null
+
+          )
+        })}
+      </div>
+      <div><Commentform currentUser={props.currentUser} /></div>
     </div>
   )
 }
